@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Сообщения</title>
+</head>
+<body>
+<form method="post" action="/on_exit_click" style="background-color: aliceblue;
+display: grid;
+grid-template-columns: 1fr;
+">
+    <button style="width: 5%;
+">Exit
+    </button>
+</form>
+<form method="post" action="/on_send_click" style="background-color: aliceblue;
+display: grid;
+grid-template-columns: 1fr;
+"><label style="width: 100%;
+padding: 10px;
+">Введите сообщение: <textarea style="width: 95%;
+height: 100px;
+resize: none;
+" name="message"></textarea></label>
+    <button style="width: 5%;
+">Send
+    </button>
+</form>
+    {% for item in messages %}
+        <p>Имя пользователя: {{ item.login }} Сообщение: {{ item.text }}</p>
+    {% endfor %}
+<!--    <form>-->
+<!--      <p>Имя пользователя: long-->
+<!--Сообщение: long</p>-->
+<!--      <p>Имя пользователя: poll-->
+<!--Сообщение: poll</p>-->
+<!--      <p>Имя пользователя: 111-->
+<!--Сообщение: jfkfkdfjksd</p>-->
+<!--    </form>-->
+</body>
+</html>

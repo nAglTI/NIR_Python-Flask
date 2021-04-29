@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Авторизация</title>
+</head>
+<body>
+<form method="post" action="/on_registration" style="background-color: aliceblue;
+display: grid;
+grid-template-columns: 1fr;
+">
+    {% if request.args.get('error') == '1' %}
+      <p style="color: red">Пользователь с данным логином уже существует</p>
+    {% endif %}
+    <label style="margin: 0 auto;
+padding: 10px;
+">Логин <input name="login"></label><label style="margin: 0 auto;
+padding: 10px;
+">Пароль <input type="password" name="pass"></label>
+    <button style="margin: 0 auto;
+padding: 10px;
+">Войти
+    </button>
+</form>
+<div style="background-color: aliceblue;
+display: grid;
+grid-template-columns: 2fr;
+"><label style="margin: 0 auto;
+padding: 10px;
+">Уже зарегистрированы? </label><a style="margin: 0 auto;
+padding: 10px;
+" href="/">Авторизоваться</a></div>
+</body>
+</html>

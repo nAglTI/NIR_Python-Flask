@@ -1,0 +1,4 @@
+{
+  "db-url": "sqlite:///database.db",
+  "flask_secret_key": "\\su3+NinK!2+4.B#"
+}
